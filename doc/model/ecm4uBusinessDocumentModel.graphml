@@ -1,0 +1,1089 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:y="http://www.yworks.com/xml/graphml" xmlns:yed="http://www.yworks.com/xml/yed/3" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://www.yworks.com/xml/schema/graphml/1.1/ygraphml.xsd">
+  <!--Created by yFiles for Java 2.11-->
+  <key attr.name="Beschreibung" attr.type="string" for="graph" id="d0"/>
+  <key for="port" id="d1" yfiles.type="portgraphics"/>
+  <key for="port" id="d2" yfiles.type="portgeometry"/>
+  <key for="port" id="d3" yfiles.type="portuserdata"/>
+  <key attr.name="url" attr.type="string" for="node" id="d4"/>
+  <key attr.name="description" attr.type="string" for="node" id="d5"/>
+  <key for="node" id="d6" yfiles.type="nodegraphics"/>
+  <key for="graphml" id="d7" yfiles.type="resources"/>
+  <key attr.name="url" attr.type="string" for="edge" id="d8"/>
+  <key attr.name="description" attr.type="string" for="edge" id="d9"/>
+  <key for="edge" id="d10" yfiles.type="edgegraphics"/>
+  <graph edgedefault="directed" id="G">
+    <data key="d0"/>
+    <node id="n0">
+      <data key="d4"/>
+      <data key="d6">
+        <y:UMLClassNode>
+          <y:Geometry height="100.0" width="170.59375000000045" x="2211.008660712458" y="253.42095948092663"/>
+          <y:Fill color="#CCCCCC" color2="#00FFFF" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="168.27734375" x="1.1582031250002274" y="25.96875">BusinessPartnerSpace</y:NodeLabel>
+          <y:UML clipContent="false" constraint="" omitDetails="false" stereotype="folder" use3DEffect="false">
+            <y:AttributeLabel/>
+            <y:MethodLabel>mandatory aspects:
+BusinessPartner</y:MethodLabel>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n1">
+      <data key="d4"/>
+      <data key="d6">
+        <y:UMLClassNode>
+          <y:Geometry height="161.67892329910137" width="136.0" x="1428.5124759952182" y="627.5493076625348"/>
+          <y:Fill color="#CCCCCC" color2="#00FFFF" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="38.86767578125" x="48.566162109375" y="25.96875">Case</y:NodeLabel>
+          <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="folder" use3DEffect="false">
+            <y:AttributeLabel>caseNo
+caseObjectType
+caseObjectNo
+caseType
+caseProcessStatus
+casePersonInCharge
+caseTeamInCharge</y:AttributeLabel>
+            <y:MethodLabel/>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n2">
+      <data key="d4"/>
+      <data key="d6">
+        <y:UMLClassNode>
+          <y:Geometry height="128.33844468784218" width="108.32243260747646" x="881.7604875826598" y="1373.0892764674024"/>
+          <y:Fill color="#CCCCCC" color2="#00FFFF" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="117.84521484375" x="-4.761391118136771" y="25.96875">SupplierInvoice</y:NodeLabel>
+          <y:UML clipContent="false" constraint="" omitDetails="false" stereotype="type" use3DEffect="true">
+            <y:AttributeLabel/>
+            <y:MethodLabel>mandatory aspects:
+Supplier
+InboundDoc</y:MethodLabel>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n3">
+      <data key="d4"/>
+      <data key="d6">
+        <y:UMLClassNode>
+          <y:Geometry height="128.33844468784218" width="108.32243260747646" x="1135.1212553489534" y="1373.0892764674024"/>
+          <y:Fill color="#CCCCCC" color2="#00FFFF" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="116.44873046875" x="-4.063148930636771" y="25.96875">CustomerOrder</y:NodeLabel>
+          <y:UML clipContent="false" constraint="" omitDetails="false" stereotype="type" use3DEffect="false">
+            <y:AttributeLabel/>
+            <y:MethodLabel>mandatory aspects:
+Customer
+InboundDoc</y:MethodLabel>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n4">
+      <data key="d4"/>
+      <data key="d6">
+        <y:UMLClassNode>
+          <y:Geometry height="128.33844468784218" width="108.32243260747646" x="1387.726545207593" y="1373.0892764674024"/>
+          <y:Fill color="#CCCCCC" color2="#00FFFF" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="102.9599609375" x="2.681235834988229" y="25.96875">SupplierOffer</y:NodeLabel>
+          <y:UML clipContent="false" constraint="" omitDetails="false" stereotype="type" use3DEffect="false">
+            <y:AttributeLabel/>
+            <y:MethodLabel>mandatory aspects:
+Supplier
+InboundDoc</y:MethodLabel>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n5">
+      <data key="d4"/>
+      <data key="d6">
+        <y:UMLClassNode>
+          <y:Geometry height="100.0" width="175.9999999999999" x="914.8876015189439" y="357.78322520374326"/>
+          <y:Fill color="#CCCCCC" color2="#00FFFF" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="91.572265625" x="42.21386718749994" y="25.96875">InboundDoc</y:NodeLabel>
+          <y:UML clipContent="false" constraint="" omitDetails="false" stereotype="aspect" use3DEffect="false">
+            <y:AttributeLabel>receivedDate
+receivedNo</y:AttributeLabel>
+            <y:MethodLabel/>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n6">
+      <data key="d4"/>
+      <data key="d6">
+        <y:UMLClassNode>
+          <y:Geometry height="92.99999999999994" width="170.59375000000023" x="2211.008660712458" y="482.8497650450402"/>
+          <y:Fill color="#FFCC99" color2="#00FFFF" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="105.31494140625" x="32.639404296875114" y="25.96875">ProductSpace</y:NodeLabel>
+          <y:UML clipContent="false" constraint="" omitDetails="false" stereotype="folder" use3DEffect="false">
+            <y:AttributeLabel/>
+            <y:MethodLabel>Product</y:MethodLabel>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n7">
+      <data key="d4"/>
+      <data key="d6">
+        <y:UMLClassNode>
+          <y:Geometry height="128.33844468784218" width="108.32243260747646" x="996.7988227414769" y="1373.0892764674024"/>
+          <y:Fill color="#CCCCCC" color2="#00FFFF" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="126.9287109375" x="-9.303139165011771" y="25.96875">CustomerInvoice</y:NodeLabel>
+          <y:UML clipContent="false" constraint="" omitDetails="false" stereotype="type" use3DEffect="false">
+            <y:AttributeLabel/>
+            <y:MethodLabel>mandatory aspects:
+Customer
+OutboundDoc</y:MethodLabel>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n8">
+      <data key="d4"/>
+      <data key="d6">
+        <y:UMLClassNode>
+          <y:Geometry height="128.33844468784218" width="108.32243260747646" x="1249.4041126001166" y="1373.0892764674024"/>
+          <y:Fill color="#CCCCCC" color2="#00FFFF" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="107.365234375" x="0.4785991162382288" y="25.96875">SupplierOrder</y:NodeLabel>
+          <y:UML clipContent="false" constraint="" omitDetails="false" stereotype="type" use3DEffect="false">
+            <y:AttributeLabel/>
+            <y:MethodLabel>mandatory aspects:
+Supplier
+OutboundDoc</y:MethodLabel>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n9">
+      <data key="d4"/>
+      <data key="d6">
+        <y:UMLClassNode>
+          <y:Geometry height="128.33844468784218" width="108.32243260747646" x="1504.6689459684796" y="1373.0892764674024"/>
+          <y:Fill color="#CCCCCC" color2="#00FFFF" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="112.04345703125" x="-1.8605122118867712" y="25.96875">CustomerOffer</y:NodeLabel>
+          <y:UML clipContent="false" constraint="" omitDetails="false" stereotype="type" use3DEffect="false">
+            <y:AttributeLabel/>
+            <y:MethodLabel>mandatory aspects:
+Customer
+OutboundDoc</y:MethodLabel>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n10">
+      <data key="d4"/>
+      <data key="d6">
+        <y:UMLClassNode>
+          <y:Geometry height="74.00734355044699" width="175.9999999999999" x="914.8876015189442" y="468.4568783674256"/>
+          <y:Fill color="#CCCCCC" color2="#00FFFF" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="104.0009765625" x="35.99951171874994" y="25.96875">OutboundDoc</y:NodeLabel>
+          <y:UML clipContent="false" constraint="" omitDetails="false" stereotype="aspect" use3DEffect="false">
+            <y:AttributeLabel>sendDate</y:AttributeLabel>
+            <y:MethodLabel/>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n11">
+      <data key="d4"/>
+      <data key="d6">
+        <y:UMLClassNode>
+          <y:Geometry height="182.157948719133" width="170.59375000000023" x="2211.008660712458" y="719.1466368797159"/>
+          <y:Fill color="#FFFFFF" color2="#00FFFF" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="89.7314453125" x="40.431152343750114" y="25.96875">RecordData</y:NodeLabel>
+          <y:UML clipContent="false" constraint="" omitDetails="false" stereotype="aspect" use3DEffect="false">
+            <y:AttributeLabel>recType
+recRetentionEndDate
+recRetentionStartDate
+recRetentionMinPeriod
+recRetentionMaxPeriod
+recRetentionDeletionDate
+recRetentionPolicy</y:AttributeLabel>
+            <y:MethodLabel/>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n12">
+      <data key="d4"/>
+      <data key="d6">
+        <y:UMLClassNode>
+          <y:Geometry height="161.67892329910137" width="136.0" x="1428.5124759952182" y="851.7953648812568"/>
+          <y:Fill color="#CCCCCC" color2="#00FFFF" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="96.3330078125" x="19.83349609375" y="25.96875">BusinessDoc</y:NodeLabel>
+          <y:UML clipContent="false" constraint="" omitDetails="false" stereotype="type" use3DEffect="false">
+            <y:AttributeLabel>docDate
+processedStatus</y:AttributeLabel>
+            <y:MethodLabel>mandatory aspects:
+Tenant
+DocRef</y:MethodLabel>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n13">
+      <data key="d4"/>
+      <data key="d6">
+        <y:UMLClassNode>
+          <y:Geometry height="92.99999999999994" width="176.0" x="1120.887601518944" y="254.10957204006098"/>
+          <y:Fill color="#CCCCCC" color2="#00FFFF" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="124.3134765625" x="25.84326171875" y="25.96875">BusinessPartner</y:NodeLabel>
+          <y:UML clipContent="false" constraint="" omitDetails="false" stereotype="aspect" use3DEffect="false">
+            <y:AttributeLabel>partnerNo
+partnerName</y:AttributeLabel>
+            <y:MethodLabel/>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n14">
+      <data key="d4"/>
+      <data key="d6">
+        <y:UMLClassNode>
+          <y:Geometry height="77.0625" width="176.0" x="1120.887601518944" y="364.9119243897151"/>
+          <y:Fill color="#CCCCCC" color2="#00FFFF" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="65.369140625" x="55.3154296875" y="25.96875">Supplier</y:NodeLabel>
+          <y:UML clipContent="false" constraint="" omitDetails="false" stereotype="aspect" use3DEffect="false">
+            <y:AttributeLabel>creditorNo</y:AttributeLabel>
+            <y:MethodLabel/>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n15">
+      <data key="d4"/>
+      <data key="d6">
+        <y:UMLClassNode>
+          <y:Geometry height="77.0625" width="176.0" x="1326.887601518944" y="364.9119243897151"/>
+          <y:Fill color="#CCCCCC" color2="#00FFFF" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="74.45263671875" x="50.773681640625" y="25.96875">Customer</y:NodeLabel>
+          <y:UML clipContent="false" constraint="" omitDetails="false" stereotype="aspect" use3DEffect="false">
+            <y:AttributeLabel>debitorNo</y:AttributeLabel>
+            <y:MethodLabel/>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n16">
+      <data key="d4"/>
+      <data key="d6">
+        <y:UMLClassNode>
+          <y:Geometry height="77.0625" width="170.59375000000034" x="2211.008660712458" y="605.8497650450402"/>
+          <y:Fill color="#99CC00" color2="#00FFFF" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="55.9111328125" x="57.34130859375017" y="25.96875">DocRef</y:NodeLabel>
+          <y:UML clipContent="false" constraint="" omitDetails="false" stereotype="aspect" use3DEffect="false">
+            <y:AttributeLabel>docNo</y:AttributeLabel>
+            <y:MethodLabel/>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n17">
+      <data key="d4"/>
+      <data key="d6">
+        <y:UMLClassNode>
+          <y:Geometry height="104.922085132951" width="170.59375000000045" x="2211.008660712458" y="937.5389574335245"/>
+          <y:Fill color="#FFFFFF" color2="#00FFFF" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="71.99609375" x="49.29882812500023" y="25.96875">Hashable</y:NodeLabel>
+          <y:UML clipContent="false" constraint="" omitDetails="false" stereotype="aspect" use3DEffect="false">
+            <y:AttributeLabel>hashValue
+hashType
+timestamp</y:AttributeLabel>
+            <y:MethodLabel/>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n18">
+      <data key="d4"/>
+      <data key="d6">
+        <y:UMLClassNode>
+          <y:Geometry height="92.99999999999994" width="176.0" x="1326.887601518944" y="253.42095948092663"/>
+          <y:Fill color="#CCCCCC" color2="#00FFFF" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="60.6337890625" x="57.68310546875" y="25.96875">Contact</y:NodeLabel>
+          <y:UML clipContent="false" constraint="" omitDetails="false" stereotype="aspect" use3DEffect="false">
+            <y:AttributeLabel>contactNo
+contactFullName</y:AttributeLabel>
+            <y:MethodLabel/>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n19">
+      <data key="d4"/>
+      <data key="d6">
+        <y:UMLClassNode>
+          <y:Geometry height="100.0" width="136.0" x="916.3955913037385" y="1007.8653102220537"/>
+          <y:Fill color="#CCCCCC" color2="#00FFFF" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="67.044921875" x="34.4775390625" y="25.96875">Contract</y:NodeLabel>
+          <y:UML clipContent="false" constraint="" omitDetails="false" stereotype="type" use3DEffect="false">
+            <y:AttributeLabel>contractType</y:AttributeLabel>
+            <y:MethodLabel>ContractDetails</y:MethodLabel>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n20">
+      <data key="d4"/>
+      <data key="d6">
+        <y:UMLClassNode>
+          <y:Geometry height="77.0625" width="136.0" x="1680.975545879823" y="1253.978891606453"/>
+          <y:Fill color="#CCCCCC" color2="#00FFFF" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="141.42041015625" x="-2.710205078125" y="25.96875">OrderConfirmation</y:NodeLabel>
+          <y:UML clipContent="false" constraint="" omitDetails="false" stereotype="type" use3DEffect="false">
+            <y:AttributeLabel>orderConfirmationNo</y:AttributeLabel>
+            <y:MethodLabel/>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n21">
+      <data key="d4"/>
+      <data key="d6">
+        <y:UMLClassNode>
+          <y:Geometry height="77.0625" width="136.0" x="916.3955913037385" y="1253.9788916064533"/>
+          <y:Fill color="#CCCCCC" color2="#00FFFF" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="56.47607421875" x="39.761962890625" y="25.96875">Invoice</y:NodeLabel>
+          <y:UML clipContent="false" constraint="" omitDetails="false" stereotype="type" use3DEffect="false">
+            <y:AttributeLabel>invoiceNo</y:AttributeLabel>
+            <y:MethodLabel/>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n22">
+      <data key="d4"/>
+      <data key="d6">
+        <y:UMLClassNode>
+          <y:Geometry height="77.0625" width="136.0" x="1429.9088207643076" y="1253.978891606453"/>
+          <y:Fill color="#CCCCCC" color2="#00FFFF" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="41.5908203125" x="47.20458984375" y="25.96875">Offer</y:NodeLabel>
+          <y:UML clipContent="false" constraint="" omitDetails="false" stereotype="type" use3DEffect="false">
+            <y:AttributeLabel>offerNo</y:AttributeLabel>
+            <y:MethodLabel/>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n23">
+      <data key="d4"/>
+      <data key="d6">
+        <y:UMLClassNode>
+          <y:Geometry height="77.0625" width="136.0" x="1178.8420956487923" y="1253.978891606453"/>
+          <y:Fill color="#CCCCCC" color2="#00FFFF" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="45.99609375" x="45.001953125" y="25.96875">Order</y:NodeLabel>
+          <y:UML clipContent="false" constraint="" omitDetails="false" stereotype="type" use3DEffect="false">
+            <y:AttributeLabel>orderNo</y:AttributeLabel>
+            <y:MethodLabel/>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n24">
+      <data key="d4"/>
+      <data key="d6">
+        <y:UMLClassNode>
+          <y:Geometry height="128.33844468784218" width="108.32243260747646" x="1896.315663724504" y="1373.0892764674024"/>
+          <y:Fill color="#CCCCCC" color2="#00FFFF" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="34.265625" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="83.5869140625" x="12.367759272488229" y="25.96875">Supplier
+CreditNote</y:NodeLabel>
+          <y:UML clipContent="false" constraint="" omitDetails="false" stereotype="type" use3DEffect="false">
+            <y:AttributeLabel/>
+            <y:MethodLabel>mandatory aspects:
+Supplier
+InboundDoc</y:MethodLabel>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n25">
+      <data key="d4"/>
+      <data key="d6">
+        <y:UMLClassNode>
+          <y:Geometry height="128.33844468784218" width="108.32243260747646" x="1757.9932311170278" y="1373.0892764674024"/>
+          <y:Fill color="#CCCCCC" color2="#00FFFF" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="34.265625" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="107.365234375" x="0.4785991162382288" y="25.96875">SupplierOrder
+Confirmation</y:NodeLabel>
+          <y:UML clipContent="false" constraint="" omitDetails="false" stereotype="type" use3DEffect="false">
+            <y:AttributeLabel/>
+            <y:MethodLabel>mandatory aspects:
+Supplier</y:MethodLabel>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n26">
+      <data key="d4"/>
+      <data key="d6">
+        <y:UMLClassNode>
+          <y:Geometry height="77.0625" width="136.0" x="1942.1373504714925" y="1253.978891606453"/>
+          <y:Fill color="#CCCCCC" color2="#00FFFF" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="83.5869140625" x="26.20654296875" y="25.96875">CreditNote</y:NodeLabel>
+          <y:UML clipContent="false" constraint="" omitDetails="false" stereotype="type" use3DEffect="false">
+            <y:AttributeLabel>creditNoteNo</y:AttributeLabel>
+            <y:MethodLabel/>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n27">
+      <data key="d4"/>
+      <data key="d6">
+        <y:UMLClassNode>
+          <y:Geometry height="128.33844468784218" width="108.32243260747646" x="2015.6366046110045" y="1373.0892764674024"/>
+          <y:Fill color="#CCCCCC" color2="#00FFFF" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="34.265625" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="83.5869140625" x="12.367759272488229" y="25.96875">Customer
+CreditNote</y:NodeLabel>
+          <y:UML clipContent="false" constraint="" omitDetails="false" stereotype="type" use3DEffect="false">
+            <y:AttributeLabel/>
+            <y:MethodLabel>mandatory aspects:
+Customer
+OutboundDoc</y:MethodLabel>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n28">
+      <data key="d4"/>
+      <data key="d6">
+        <y:UMLClassNode>
+          <y:Geometry height="128.33844468784218" width="108.32243260747646" x="1642.991378575956" y="1373.0892764674024"/>
+          <y:Fill color="#CCCCCC" color2="#00FFFF" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="34.265625" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="116.44873046875" x="-4.063148930636771" y="25.96875">CustomerOrder
+Confirmation</y:NodeLabel>
+          <y:UML clipContent="false" constraint="" omitDetails="false" stereotype="type" use3DEffect="false">
+            <y:AttributeLabel/>
+            <y:MethodLabel>mandatory aspects:
+Customer</y:MethodLabel>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n29">
+      <data key="d4"/>
+      <data key="d6">
+        <y:UMLClassNode>
+          <y:Geometry height="77.0625" width="136.0" x="916.3955913037386" y="1117.8957952081498"/>
+          <y:Fill color="#CCCCCC" color2="#00FFFF" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="34.62109375" x="50.689453125" y="25.96875">Mail</y:NodeLabel>
+          <y:UML clipContent="false" constraint="" omitDetails="false" stereotype="type" use3DEffect="false">
+            <y:AttributeLabel>mailType</y:AttributeLabel>
+            <y:MethodLabel/>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n30">
+      <data key="d4"/>
+      <data key="d6">
+        <y:UMLClassNode>
+          <y:Geometry height="93.0" width="136.0" x="914.8876015189442" y="906.9623420144811"/>
+          <y:Fill color="#CCCCCC" color2="#00FFFF" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="143.95947265625" x="-3.979736328125" y="25.96875">NoticeToTerminate</y:NodeLabel>
+          <y:UML clipContent="false" constraint="" omitDetails="false" stereotype="type" use3DEffect="false">
+            <y:AttributeLabel/>
+            <y:MethodLabel>ContractDetails</y:MethodLabel>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n31">
+      <data key="d4"/>
+      <data key="d6">
+        <y:UMLClassNode>
+          <y:Geometry height="86.15117718699435" width="136.0" x="1646.3972349107141" y="794.8565365771788"/>
+          <y:Fill color="#CCCCCC" color2="#00FFFF" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="116.14404296875" x="9.927978515625" y="25.96875">Documentation</y:NodeLabel>
+          <y:UML clipContent="false" constraint="" omitDetails="false" stereotype="type" use3DEffect="false">
+            <y:AttributeLabel/>
+            <y:MethodLabel>Revision</y:MethodLabel>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n32">
+      <data key="d4"/>
+      <data key="d6">
+        <y:UMLClassNode>
+          <y:Geometry height="86.15117718699435" width="136.0" x="1646.3972349107141" y="889.5592379373103"/>
+          <y:Fill color="#CCCCCC" color2="#00FFFF" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="62.67138671875" x="36.664306640625" y="25.96875">Minutes</y:NodeLabel>
+          <y:UML clipContent="false" constraint="" omitDetails="false" stereotype="type" use3DEffect="false">
+            <y:AttributeLabel/>
+            <y:MethodLabel/>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n33">
+      <data key="d4"/>
+      <data key="d6">
+        <y:UMLClassNode>
+          <y:Geometry height="86.15117718699435" width="170.57831096910877" x="1646.3972349107141" y="700.2388336993831"/>
+          <y:Fill color="#CCCCCC" color2="#00FFFF" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="159.0478515625" x="5.765229703304385" y="25.96875">ProcurementRequest</y:NodeLabel>
+          <y:UML clipContent="false" constraint="" omitDetails="false" stereotype="type" use3DEffect="false">
+            <y:AttributeLabel/>
+            <y:MethodLabel/>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n34">
+      <data key="d4"/>
+      <data key="d6">
+        <y:UMLClassNode>
+          <y:Geometry height="77.0625" width="175.9999999999999" x="914.8876015189442" y="553.1378750815545"/>
+          <y:Fill color="#CCCCCC" color2="#00FFFF" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="118.28955078125" x="28.855224609374943" y="25.96875">ContractDetails</y:NodeLabel>
+          <y:UML clipContent="false" constraint="" omitDetails="false" stereotype="aspect" use3DEffect="false">
+            <y:AttributeLabel>contractNo</y:AttributeLabel>
+            <y:MethodLabel/>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n35">
+      <data key="d4"/>
+      <data key="d6">
+        <y:UMLClassNode>
+          <y:Geometry height="92.99999999999994" width="176.0" x="914.8876015189438" y="254.10957204006098"/>
+          <y:Fill color="#CCCCCC" color2="#00FFFF" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="55.18115234375" x="60.409423828125" y="25.96875">Tenant</y:NodeLabel>
+          <y:UML clipContent="false" constraint="" omitDetails="false" stereotype="aspect" use3DEffect="false">
+            <y:AttributeLabel>tenantID</y:AttributeLabel>
+            <y:MethodLabel/>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n36">
+      <data key="d4"/>
+      <data key="d6">
+        <y:UMLClassNode>
+          <y:Geometry height="100.0" width="136.0" x="1428.5124759952182" y="1070.9862284751082"/>
+          <y:Fill color="#CCCCCC" color2="#00FFFF" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="151.74169921875" x="-7.870849609375" y="25.96875">BusinessPartnerDoc</y:NodeLabel>
+          <y:UML clipContent="false" constraint="" omitDetails="false" stereotype="type" use3DEffect="false">
+            <y:AttributeLabel/>
+            <y:MethodLabel>mandatory aspects:
+BusinessPartner</y:MethodLabel>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n37">
+      <data key="d4"/>
+      <data key="d6">
+        <y:UMLClassNode>
+          <y:Geometry height="100.0" width="170.59375000000045" x="2211.008660712458" y="368.4119243897152"/>
+          <y:Fill color="#FFCC99" color2="#00FFFF" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="100.02734375" x="35.28320312500023" y="25.96875">ProjectSpace</y:NodeLabel>
+          <y:UML clipContent="false" constraint="" omitDetails="false" stereotype="folder" use3DEffect="false">
+            <y:AttributeLabel/>
+            <y:MethodLabel>Project
+Customer
+</y:MethodLabel>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n38">
+      <data key="d4"/>
+      <data key="d6">
+        <y:UMLClassNode>
+          <y:Geometry height="93.0" width="176.0" x="1120.887601518944" y="449.54294553932755"/>
+          <y:Fill color="#CCCCCC" color2="#00FFFF" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="61.35107421875" x="57.324462890625" y="25.96875">Product</y:NodeLabel>
+          <y:UML clipContent="false" constraint="" omitDetails="false" stereotype="aspect" use3DEffect="false">
+            <y:AttributeLabel>productNo
+productName</y:AttributeLabel>
+            <y:MethodLabel/>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n39">
+      <data key="d4"/>
+      <data key="d6">
+        <y:UMLClassNode>
+          <y:Geometry height="93.0" width="176.0" x="1326.887601518944" y="449.54294553932755"/>
+          <y:Fill color="#CCCCCC" color2="#00FFFF" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="56.0634765625" x="59.96826171875" y="25.96875">Project</y:NodeLabel>
+          <y:UML clipContent="false" constraint="" omitDetails="false" stereotype="aspect" use3DEffect="false">
+            <y:AttributeLabel>projectNo
+projectName</y:AttributeLabel>
+            <y:MethodLabel/>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n40">
+      <data key="d4"/>
+      <data key="d6">
+        <y:UMLClassNode>
+          <y:Geometry height="86.15117718699435" width="136.0" x="1646.3972349107141" y="985.1281000605175"/>
+          <y:Fill color="#CCCCCC" color2="#00FFFF" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="85.81494140625" x="25.092529296875" y="25.96875">Calculation</y:NodeLabel>
+          <y:UML clipContent="false" constraint="" omitDetails="false" stereotype="type" use3DEffect="false">
+            <y:AttributeLabel/>
+            <y:MethodLabel/>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n41">
+      <data key="d4"/>
+      <data key="d6">
+        <y:UMLClassNode>
+          <y:Geometry height="93.0" width="136.0" x="914.8876015189442" y="806.0593738069086"/>
+          <y:Fill color="#CCCCCC" color2="#00FFFF" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="165.4208984375" x="-14.71044921875" y="25.96875">AcceptanceCertificate</y:NodeLabel>
+          <y:UML clipContent="false" constraint="" omitDetails="false" stereotype="type" use3DEffect="false">
+            <y:AttributeLabel/>
+            <y:MethodLabel/>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n42">
+      <data key="d4"/>
+      <data key="d6">
+        <y:UMLClassNode>
+          <y:Geometry height="77.0625" width="175.9999999999999" x="914.8876015189439" y="641.1547339660651"/>
+          <y:Fill color="#CCCCCC" color2="#00FFFF" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="61.68115234375" x="57.15942382812494" y="25.96875">Revsion</y:NodeLabel>
+          <y:UML clipContent="false" constraint="" omitDetails="false" stereotype="aspect" use3DEffect="false">
+            <y:AttributeLabel>revisionNo</y:AttributeLabel>
+            <y:MethodLabel/>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n43">
+      <data key="d4"/>
+      <data key="d6">
+        <y:UMLClassNode>
+          <y:Geometry height="77.0625" width="136.0" x="2203.2991550631623" y="1253.978891606453"/>
+          <y:Fill color="#CCCCCC" color2="#00FFFF" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="99.53857421875" x="18.230712890625" y="25.96875">DeliveryNote</y:NodeLabel>
+          <y:UML clipContent="false" constraint="" omitDetails="false" stereotype="type" use3DEffect="false">
+            <y:AttributeLabel>deliveryNoteNo</y:AttributeLabel>
+            <y:MethodLabel/>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n44">
+      <data key="d4"/>
+      <data key="d6">
+        <y:UMLClassNode>
+          <y:Geometry height="128.33844468784218" width="108.32243260747646" x="2153.959037218481" y="1373.0892764674024"/>
+          <y:Fill color="#CCCCCC" color2="#00FFFF" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="34.265625" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="99.53857421875" x="4.391929194363229" y="25.96875">Supplier
+DeliveryNote</y:NodeLabel>
+          <y:UML clipContent="false" constraint="" omitDetails="false" stereotype="type" use3DEffect="false">
+            <y:AttributeLabel/>
+            <y:MethodLabel>mandatory aspects:
+Supplier
+InboundDoc</y:MethodLabel>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n45">
+      <data key="d4"/>
+      <data key="d6">
+        <y:UMLClassNode>
+          <y:Geometry height="128.33844468784218" width="108.32243260747646" x="2273.2799781049816" y="1373.0892764674024"/>
+          <y:Fill color="#CCCCCC" color2="#00FFFF" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="34.265625" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="99.53857421875" x="4.391929194363229" y="25.96875">Customer
+DeliveryNote</y:NodeLabel>
+          <y:UML clipContent="false" constraint="" omitDetails="false" stereotype="type" use3DEffect="false">
+            <y:AttributeLabel/>
+            <y:MethodLabel>mandatory aspects:
+Customer
+OutboundDoc</y:MethodLabel>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n46">
+      <data key="d4"/>
+      <data key="d6">
+        <y:UMLClassNode>
+          <y:Geometry height="77.0625" width="176.0" x="1532.887601518944" y="364.9119243897151"/>
+          <y:Fill color="#CCCCCC" color2="#00FFFF" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="54.77490234375" x="60.612548828125" y="25.96875">Region</y:NodeLabel>
+          <y:UML clipContent="false" constraint="" omitDetails="false" stereotype="aspect" use3DEffect="false">
+            <y:AttributeLabel>regionCode</y:AttributeLabel>
+            <y:MethodLabel/>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n47">
+      <data key="d4"/>
+      <data key="d6">
+        <y:UMLClassNode>
+          <y:Geometry height="92.99999999999994" width="176.0" x="1532.887601518944" y="449.5429455393276"/>
+          <y:Fill color="#CCCCCC" color2="#00FFFF" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="75.7666015625" x="50.11669921875" y="25.96875">Language</y:NodeLabel>
+          <y:UML clipContent="false" constraint="" omitDetails="false" stereotype="aspect" use3DEffect="false">
+            <y:AttributeLabel>languageCode</y:AttributeLabel>
+            <y:MethodLabel/>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <edge id="e0" source="n1" target="n12">
+      <data key="d8"/>
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="none"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e1" source="n36" target="n19">
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="-13.815426504142124" sy="24.197785934482113" tx="0.0" ty="-49.999881196776315"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="white_delta" target="none"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e2" source="n36" target="n29">
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="13.346402630578268" sy="25.795540589465645" tx="0.0" ty="-38.531158447265625"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="white_delta" target="none"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e3" source="n36" target="n21">
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="-4.228898574240702" sy="21.002276624514934" tx="0.0" ty="-38.531158447265625"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="white_delta" target="none"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e4" source="n36" target="n23">
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="16.54191194054556" sy="28.991049899432824" tx="0.0" ty="-38.531158447265625"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="white_delta" target="none"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e5" source="n36" target="n22">
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="11.74864797559485" sy="27.393295244449178" tx="10.35230320650544" ty="-38.563928280343816"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="white_delta" target="none"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e6" source="n36" target="n20">
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="20.74423258676734" sy="32.18655920939989" tx="0.0" ty="-38.531158447265625"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="white_delta" target="none"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e7" source="n36" target="n26">
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="7.962195346898625" sy="14.61125800458069" tx="0.0" ty="-38.531158447265625"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="white_delta" target="none"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e8" source="n21" target="n2">
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="white_delta" target="none"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e9" source="n21" target="n7">
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="white_delta" target="none"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e10" source="n23" target="n3">
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="white_delta" target="none"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e11" source="n23" target="n8">
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="white_delta" target="none"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e12" source="n22" target="n4">
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="white_delta" target="none"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e13" source="n22" target="n9">
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="white_delta" target="none"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e14" source="n20" target="n28">
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="white_delta" target="none"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e15" source="n20" target="n25">
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="white_delta" target="none"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e16" source="n26" target="n24">
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="white_delta" target="none"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e17" source="n26" target="n27">
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="white_delta" target="none"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e18" source="n33" target="n12">
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="-85.26833293682863" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="white_delta"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e19" source="n32" target="n12">
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="-67.9833984375" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="white_delta"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e20" source="n31" target="n12">
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="-67.9833984375" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="white_delta"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e21" source="n30" target="n36">
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="-46.485595703125" tx="2.1621200456934275" ty="24.197785934482113"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="white_delta"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e22" source="n40" target="n12">
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="white_delta"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e23" source="n36" target="n12">
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="white_delta"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e24" source="n41" target="n36">
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="white_delta"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e25" source="n44" target="n43">
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="white_delta"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e26" source="n45" target="n43">
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="white_delta"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e27" source="n43" target="n36">
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="white_delta"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e28" source="n11" target="n16">
+      <data key="d9"/>
+      <data key="d10">
+        <y:GenericEdge configuration="com.yworks.bpmn.Connection">
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="white_delta"/>
+          <y:StyleProperties>
+            <y:Property class="com.yworks.yfiles.bpmn.view.BPMNTypeEnum" name="com.yworks.bpmn.type" value="CONNECTION_TYPE_SEQUENCE_FLOW"/>
+          </y:StyleProperties>
+        </y:GenericEdge>
+      </data>
+    </edge>
+  </graph>
+  <data key="d7">
+    <y:Resources/>
+  </data>
+</graphml>

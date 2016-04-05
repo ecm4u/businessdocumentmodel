@@ -1,0 +1,502 @@
+<?xml version="1.0"?>
+<!DOCTYPE alfresco-config [
+    <!ENTITY view_standard_content " 
+        <show id='cm:name' for-mode='view' />
+        <show id='cm:title' for-mode='view' />
+        <show id='cm:description' for-mode='view' />
+        <show id='mimetype' for-mode='view' />
+        <show id='cm:author' for-mode='view' />
+        <show id='size' for-mode='view' />
+        <show id='cm:creator' for-mode='view' />
+        <show id='cm:created' for-mode='view' />
+        <show id='cm:modifier' for-mode='view' />
+        <show id='cm:modified' for-mode='view' />
+        <show id='cm:taggable' />
+        <show id='cm:categories'/>
+    ">
+    <!ENTITY view_standard_folder "
+        <show id='cm:name' for-mode='view' />
+        <show id='cm:title' for-mode='view' />
+        <show id='cm:description' for-mode='view' />
+        <show id='cm:author' for-mode='view' />
+        <show id='cm:creator' for-mode='view' />
+        <show id='cm:created' for-mode='view' />
+        <show id='cm:modifier' for-mode='view' />
+        <show id='cm:modified' for-mode='view' />
+        <show id='cm:taggable' />
+        <show id='cm:categories'/>
+    ">
+]>
+
+<alfresco-config>
+	<config evaluator="string-compare" condition="DocumentLibrary">
+
+        <types>
+            <type name="cm:folder">
+                <subtype name="bd:BusinessPartnerSpace"/>
+                <subtype name="bd:ProjectSpace"/>
+                <subtype name="bd:ProductSpace"/>
+                <subtype name="bd:Case"/>
+            </type>
+
+            <type name="cm:content">
+                <subtype name="bd:BusinessDoc"/>
+                <subtype name="bd:ProcurementRequest"/>
+                <subtype name="bd:Documentation"/>
+                <subtype name="bd:Protocol"/>
+                <subtype name="bd:Protocol"/>
+                <subtype name="bd:BusinessPartnerDoc"/>
+                <subtype name="bd:AcceptanceCertificate"/>
+                <subtype name="bd:NoticeToTerminate"/>
+                <subtype name="bd:Contract"/>
+                <subtype name="bd:Mail"/>
+                <subtype name="bd:Invoice"/>
+                <subtype name="bd:SupplierInvoice"/>
+                <subtype name="bd:CustomerInvoice"/>
+                <subtype name="bd:Order"/>
+                <subtype name="bd:SupplierOrder"/>
+                <subtype name="bd:CustomerOrder"/>
+                <subtype name="bd:Offer"/>
+                <subtype name="bd:SupplierOffer"/>
+                <subtype name="bd:CustomerOffer"/>
+                <subtype name="bd:OrderConfirmation"/>
+                <subtype name="bd:CustomerOrderConfirmation"/>
+                <subtype name="bd:SupplierOrderConfirmation"/>
+                <subtype name="bd:CreditNote"/>
+                <subtype name="bd:CustomerCreditNote"/>
+                <subtype name="bd:SupplierCreditNote"/>
+                <subtype name="bd:DeliveryNote"/>
+                <subtype name="bd:CustomerDeliveryNote"/>
+                <subtype name="bd:SupplierDeliveryNote"/>
+            </type>
+        </types>
+
+        <indicators>
+        </indicators>
+
+		<aspects>
+			<visible>
+                <aspect name="bd:InboundDoc"/>
+                <aspect name="bd:OutboundDoc"/>
+                <aspect name="bd:Tenant"/>
+                <aspect name="bd:BusinessPartner"/>
+                <aspect name="bd:Contact"/>
+                <aspect name="bd:Product"/>
+                <aspect name="bd:Project"/>
+                <aspect name="bd:Supplier"/>
+                <aspect name="bd:Customer"/>
+                <aspect name="bd:ContractDetails"/>
+                <aspect name="bd:Revision"/>
+                <aspect name="bd:DocRef"/>
+                <aspect name="bd:Region"/>
+                <aspect name="bd:Language"/>
+			</visible>
+
+            <addable>
+            </addable>
+
+            <removeable>
+            </removeable>
+		</aspects>
+	</config>
+
+	
+    <!-- ********************************** -->
+    <!-- View/Edit mode for folder types    -->
+    <!-- ********************************** -->
+
+    <!-- TODO type bd:BusinessPartnerSpace -->
+    <!-- END type bd:BusinessPartnerSpace -->
+
+    <!-- TODO type bd:ProjectSpace -->
+    <!-- END type bd:ProjectSpace -->
+
+    <!-- TODO type bd:ProductSpace -->
+    <!-- END type bd:ProductSpace -->
+
+    <!-- TODO type bd:Case -->
+    <!-- END type bd:Case -->
+
+    <!-- ********************************** -->
+    <!-- View/Edit mode for content types   -->
+    <!-- ********************************** -->
+
+	<config evaluator="node-type" condition="bd:BusinessDoc">
+		<forms>
+			<form>
+				<field-visibility>
+                    &view_standard_content;
+                    <show id="bd:docDate" />
+                    <show id="bd:processedStatus" />
+				</field-visibility>
+				<appearance>
+					<set id="bd:BusinessDoc" appearance="fieldset" label-id="bd.label.set.BusinessDoc" />
+                    <field id="bd:docDate" label-id="bd.label.field.BusinessDoc.docDate" set="bd:BusinessDoc"/>
+                    <field id="bd:processedStatus" label-id="bd.label.field.BusinessDoc.processedStatus" set="bd:BusinessDoc"/>
+                </appearance>
+            </form>
+        </forms>
+    </config>
+
+    <!-- TODO type bd:ProcurementRequest -->
+    <!-- END type bd:ProcurementRequest -->
+
+    <!-- TODO type bd:Documentation -->
+    <!-- END type bd:Documentation -->
+
+    <!-- TODO type bd:Protocol -->
+    <!-- END type bd:Protocol -->
+
+    <!-- TODO type bd:Calculation -->
+    <!-- END type bd:Calculation -->
+
+	<config evaluator="node-type" condition="bd:BusinessPartnerDoc">
+		<forms>
+			<form>
+				<field-visibility>
+                    &view_standard_content;
+                    <show id="bd:docDate" />
+                    <show id="bd:processedStatus" />
+				</field-visibility>
+				<appearance>
+					<set id="bd:BusinessPartnerDoc" appearance="fieldset" label-id="bd.label.set.BusinessPartnerDoc" />
+                    <field id="bd:docDate" label-id="bd.label.field.BusinessDoc.docDate" set="bd:BusinessPartnerDoc"/>
+                    <field id="bd:processedStatus" label-id="bd.label.field.BusinessDoc.processedStatus" set="bd:BusinessPartnerDoc"/>
+                </appearance>
+            </form>
+        </forms>
+    </config>
+    <!-- END type bd:BusinessPartnerDoc -->
+
+    <!-- TODO type bd:AcceptanceCertificate -->
+    <!-- END type bd:AcceptanceCertificate -->
+
+    <!-- TODO type bd:NoticeToTerminate -->
+    <!-- END type bd:NoticeToTerminate -->
+
+    <!-- TODO type bd:Contract -->
+    <!-- END type bd:Contract -->
+
+    <!-- TODO type bd:Mail -->
+    <!-- END type bd:Mail -->
+
+	<config evaluator="node-type" condition="bd:Invoice">
+		<forms>
+			<form>
+				<field-visibility>
+                    &view_standard_content;
+                    <show id="bd:docDate" />
+                    <show id="bd:processedStatus" />
+                    <show id="bd:invoiceNo" />
+				</field-visibility>
+				<appearance>
+					<set id="bd:BusinessPartnerDoc" appearance="fieldset" label-id="bd.label.set.BusinessPartnerDoc" />
+                    <field id="bd:docDate" label-id="bd.label.field.BusinessDoc.docDate" set="bd:BusinessPartnerDoc"/>
+                    <field id="bd:processedStatus" label-id="bd.label.field.BusinessDoc.processedStatus" set="bd:BusinessPartnerDoc"/>
+                    <field id="bd:invoiceNo" label-id="bd.label.field.Invoice.invoiceNo" set="bd:BusinessPartnerDoc"/>
+                </appearance>
+            </form>
+        </forms>
+    </config>
+    <!-- END type bd:Invoice -->
+
+	<config evaluator="node-type" condition="bd:SupplierInvoice">
+		<forms>
+			<form>
+				<field-visibility>
+                    &view_standard_content;
+                    <show id="bd:docDate" />
+                    <show id="bd:processedStatus" />
+                    <show id="bd:invoiceNo" for-mode="view"/>
+				</field-visibility>
+				<appearance>
+					<set id="bd:BusinessPartnerDoc" appearance="fieldset" label-id="bd.label.set.BusinessPartnerDoc" />
+                    <field id="bd:docDate" label-id="bd.label.field.BusinessDoc.docDate" set="bd:BusinessPartnerDoc"/>
+                    <field id="bd:processedStatus" label-id="bd.label.field.BusinessDoc.processedStatus" set="bd:BusinessPartnerDoc"/>
+                    <field id="bd:invoiceNo" label-id="bd.label.field.Invoice.invoiceNo" set="bd:BusinessPartnerDoc"/>
+                </appearance>
+            </form>
+        </forms>
+    </config>
+    <!-- END type bd:SupplierInvoice -->
+
+	<config evaluator="node-type" condition="bd:CustomerInvoice">
+		<forms>
+			<form>
+				<field-visibility>
+                    &view_standard_content;
+                    <show id="bd:docDate" />
+                    <show id="bd:processedStatus" />
+                    <show id="bd:invoiceNo" for-mode="view"/>
+				</field-visibility>
+				<appearance>
+					<set id="bd:BusinessPartnerDoc" appearance="fieldset" label-id="bd.label.set.BusinessPartnerDoc" />
+                    <field id="bd:docDate" label-id="bd.label.field.BusinessDoc.docDate" set="bd:BusinessPartnerDoc"/>
+                    <field id="bd:processedStatus" label-id="bd.label.field.BusinessDoc.processedStatus" set="bd:BusinessPartnerDoc"/>
+                    <field id="bd:invoiceNo" label-id="bd.label.field.Invoice.invoiceNo" set="bd:BusinessPartnerDoc"/>
+                </appearance>
+            </form>
+        </forms>
+    </config>
+    <!-- END type bd:CustomerInvoice -->
+
+    <!-- TODO type bd:Order -->
+    <!-- END type bd:Order -->
+
+    <!-- TODO type bd:SupplierOrder -->
+    <!-- END type bd:SupplierOrder -->
+
+    <!-- TODO type bd:CustomerOrder -->
+    <!-- END type bd:CustomerOrder -->
+
+    <!-- TODO type bd:Offer -->
+    <!-- END type bd:Offer -->
+
+    <!-- TODO type bd:SupplierOffer -->
+    <!-- END type bd:SupplierOffer -->
+
+    <!-- TODO type bd:CustomerOffer -->
+    <!-- END type bd:CustomerOffer -->
+
+    <!-- TODO type bd:OrderConfirmation -->
+    <!-- END type bd:OrderConfirmation -->
+
+    <!-- TODO type bd:CustomerOrderConfirmation -->
+    <!-- END type bd:CustomerOrderConfirmation -->
+
+    <!-- TODO type bd:SupplierOrderConfirmation -->
+    <!-- END type bd:SupplierOrderConfirmation -->
+
+    <!-- TODO type bd:CreditNote -->
+    <!-- END type bd:CreditNote -->
+
+    <!-- TODO type bd:CustomerCreditNote -->
+    <!-- END type bd:CustomerCreditNote -->
+
+    <!-- TODO type bd:SupplierCreditNote -->
+    <!-- END type bd:SupplierCreditNote -->
+
+    <!-- TODO type bd:DeliveryNote -->
+    <!-- END type bd:DeliveryNote -->
+
+    <!-- TODO type bd:CustomerDeliveryNote -->
+    <!-- END type bd:CustomerDeliveryNote -->
+
+    <!-- TODO type bd:SupplierDeliveryNote -->
+    <!-- END type bd:SupplierDeliveryNote -->
+
+
+    <!-- ************************** -->
+    <!-- View/Edit mode for aspects -->
+    <!-- ************************** -->
+
+	<config evaluator="aspect" condition="bd:InboundDoc">
+		<forms>
+			<form>
+				<field-visibility>
+                    <show id="bd:receivedDate" for-mode="view"/>
+                    <show id="bd:receivedNo" for-mode="view"/>
+				</field-visibility>
+				<appearance>
+                    <field id="bd:receivedDate" label-id="bd.label.field.InboundDoc.receivedDate" set="bd:BusinessPartnerDoc"/>
+
+                    <field id="bd:receivedNo" label-id="bd.label.field.InboundDoc.receivedNo" set="bd:BusinessPartnerDoc"/>
+
+                    <field id="bd:invoiceNo" label-id="bd.label.field.Invoice.invoiceNo" set="bd:BusinessPartnerDoc"/>
+				</appearance>
+			</form>
+		</forms>
+	</config>
+    <!-- END aspect bd:InboundDoc -->
+
+	<config evaluator="aspect" condition="bd:OutboundDoc">
+		<forms>
+			<form>
+				<field-visibility>
+                    <show id="bd:sendDate" for-mode="view"/>
+                    <show id="bd:sendNo" for-mode="view"/>
+				</field-visibility>
+				<appearance>
+                    <field id="bd:sendDate" label-id="bd.label.field.InboundDoc.sendDate" set="bd:BusinessPartnerDoc"/>
+
+                    <field id="bd:sendNo" label-id="bd.label.field.InboundDoc.sendNo" set="bd:BusinessPartnerDoc"/>
+				</appearance>
+			</form>
+		</forms>
+	</config>
+    <!-- END aspect bd:OutboundDoc -->
+
+	<config evaluator="aspect" condition="bd:Tenant">
+		<forms>
+			<form>
+				<field-visibility>
+                    <show id="bd:tenantNo"/>
+					<show id="bd:tenantName" for-mode="view"/>
+				</field-visibility>
+				<appearance>
+					<set id="bd:Tenant" appearance="fieldset" label-id="bd.label.set.Tenant" />
+
+					<!-- View and Edit mode -->					
+					<field id="bd:tenantNo" label-id="bd.label.field.Tenant.tenantNo" set="bd:Tenant">
+					</field>
+							
+					<field id="bd:tenantName" label-id="bd.label.field.Tenant.tenantName" set="bd:Tenant">
+                    </field>
+				</appearance>
+			</form>
+		</forms>
+	</config>
+    <!-- END aspect bd:Tenant -->
+
+	<config evaluator="aspect" condition="bd:BusinessPartner">
+		<forms>
+			<form>
+				<field-visibility>
+                    <show id="bd:partnerNo" for-mode="view"/>
+					<show id="bd:partnerName" for-mode="view"/>
+
+					<show id="bd:billingAddress" for-mode="view"/>
+					<show id="bd:shippingAddress" for-mode="view"/>
+				</field-visibility>
+				<appearance>
+					<set id="bd:BusinessPartner" appearance="fieldset" label-id="bd.label.set.BusinessPartner" />
+
+					<!-- View and Edit mode -->					
+					<field id="bd:partnerNo" label-id="bd.label.field.BusinessPartner.partnerNo" set="bd:BusinessPartner">
+					</field>
+							
+					<!-- View mode -->
+					<field id="bd:partnerName" label-id="bd.label.field.BusinessPartner.partnerName" set="bd:BusinessPartner">
+                    </field>
+
+					<field id="bd:billingAddress" label-id="bd.label.field.BusinessPartner.billingAddress" set="bd:BusinessPartner">
+                    </field>
+
+					<field id="bd:shippingAddress" label-id="bd.label.field.BusinessPartner.shippingAddress" set="bd:BusinessPartner">
+                    </field>
+				</appearance>
+			</form>
+		</forms>
+	</config>
+    <!-- END aspect bd:BusinessPartner -->
+
+    <!-- TODO aspect bd:Contact -->
+    <!-- END aspect bd:Contact -->
+
+    <!-- TODO aspect bd:Product -->
+    <!-- END aspect bd:Product -->
+
+    <!-- TODO aspect bd:Project -->
+    <!-- END aspect bd:Project -->
+
+	<config evaluator="aspect" condition="bd:Supplier">
+		<forms>
+			<form>
+				<field-visibility>
+                    <show id="bd:creditorNo" />
+				</field-visibility>
+				<appearance>
+                    <field id="bd:creditorNo" label-id="bd.label.field.Supplier.creditorNo" set="bd:BusinessPartner" >
+                    </field>
+				</appearance>
+			</form>
+		</forms>
+	</config>
+    <!-- END aspect bd:Supplier -->
+
+	<config evaluator="aspect" condition="bd:Customer">
+		<forms>
+			<form>
+				<field-visibility>
+                    <show id="bd:debitorNo" />
+				</field-visibility>
+				<appearance>
+                    <field id="bd:debitorNo" label-id="bd.label.field.Customer.debitorNo" set="bd:BusinessPartner" >
+                    </field>
+				</appearance>
+			</form>
+		</forms>
+	</config>
+    <!-- END aspect bd:Customer -->
+
+    <!-- TODO aspect bd:ContractDetails -->
+    <!-- END aspect bd:ContractDetails -->
+
+    <!-- TODO aspect bd:Revision -->
+    <!-- END aspect bd:Revision -->
+
+    <!-- TODO aspect bd:Region -->
+    <!-- END aspect bd:Region -->
+
+    <!-- TODO aspect bd:Language -->
+    <!-- END aspect bd:Language -->
+
+    <!-- ************************** -->
+    <!-- Create (for uploader plus) -->
+    <!-- ************************** -->
+
+	<config evaluator="model-type" condition="bd:SupplierInvoice">
+		<forms>
+			<form>
+				<field-visibility>
+                    <show id="bd:docDate" />
+                    <show id="bd:processedStatus" />
+
+                    <show id="bd:invoiceNo" />
+
+                    <show id="bd:tenantNo"/>
+
+                    <show id="bd:creditorNo" />
+				</field-visibility>
+				<appearance>
+					<set id="bd:BusinessPartnerDoc" appearance="fieldset" label-id="bd.label.set.BusinessPartnerDoc" />
+                    <field id="bd:docDate" label-id="bd.label.field.BusinessDoc.docDate" set="bd:BusinessPartnerDoc"/>
+                    <field id="bd:processedStatus" label-id="bd.label.field.BusinessDoc.processedStatus" set="bd:BusinessPartnerDoc"/>
+                    <field id="bd:invoiceNo" label-id="bd.label.field.Invoice.invoiceNo" set="bd:BusinessPartnerDoc"/>
+
+					<set id="bd:Tenant" appearance="fieldset" label-id="bd.label.set.Tenant" />
+                    <field id="bd:tenantNo" label-id="bd.label.field.Tenant.tenantNo" set="bd:Tenant" >
+					</field>
+                    
+					<set id="bd:BusinessPartner" appearance="fieldset" label-id="bd.label.set.BusinessPartner" />
+                    <field id="bd:creditorNo" label-id="bd.label.field.Debitor.debitorNo" set="bd:BusinessPartner">
+                    </field>
+                </appearance>
+            </form>
+        </forms>
+    </config>
+    <!-- END create type bd:SupplierInvoice -->
+
+	<config evaluator="model-type" condition="bd:CustomerInvoice">
+		<forms>
+			<form>
+				<field-visibility>
+                    <show id="bd:docDate" />
+                    <show id="bd:processedStatus" />
+
+                    <show id="bd:invoiceNo" />
+
+                    <show id="bd:tenantNo"/>
+
+                    <show id="bd:debitorNo" />
+				</field-visibility>
+				<appearance>
+					<set id="bd:BusinessPartnerDoc" appearance="fieldset" label-id="bd.label.set.BusinessPartnerDoc" />
+                    <field id="bd:docDate" label-id="bd.label.field.BusinessDoc.docDate" set="bd:BusinessPartnerDoc"/>
+                    <field id="bd:processedStatus" label-id="bd.label.field.BusinessDoc.processedStatus" set="bd:BusinessPartnerDoc"/>
+                    <field id="bd:invoiceNo" label-id="bd.label.field.Invoice.invoiceNo" set="bd:BusinessPartnerDoc"/>
+
+					<set id="bd:Tenant" appearance="fieldset" label-id="bd.label.set.Tenant" />
+                    <field id="bd:tenantNo" label-id="bd.label.field.Tenant.tenantNo" set="bd:Tenant" >
+					</field>
+                    
+					<set id="bd:BusinessPartner" appearance="fieldset" label-id="bd.label.set.BusinessPartner" />
+                    <field id="bd:debitorNo" set="bd:BusinessPartner">
+                    </field>
+                </appearance>
+            </form>
+        </forms>
+    </config>
+    <!-- END create type bd:CustomerInvoice -->
+
+</alfresco-config>
