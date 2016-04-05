@@ -31,6 +31,8 @@ The types, aspects, and properties of the model are defined following this graph
 
 ![ecm4u Business Document Model](doc/model/ecm4uBusinessDocumentModel.png)
 
-## License
+## Copyright and License
+
+Copyright &copy; 2016 [ecm4u GmbH](http://www.ecm4u.de/).
 
 This project is licensed under the [GNU LESSER GENERAL PUBLIC LICENSE version 3](LICENSE.txt).
