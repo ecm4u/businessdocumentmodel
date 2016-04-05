@@ -12,8 +12,7 @@
     <bean id="businessdocumentmodel.dictionaryBootstrap" parent="dictionaryModelBootstrap" depends-on="dictionaryBootstrap">
         <property name="models">
             <list>
-                <value>alfresco/module/${project.artifactId}/model/content-model.xml</value>
-                <value>alfresco/module/${project.artifactId}/model/workflow-model.xml</value>
+                <value>alfresco/module/${project.artifactId}/model/BusinessDocumentsModel.xml</value>
             </list>
         </property>
     </bean>

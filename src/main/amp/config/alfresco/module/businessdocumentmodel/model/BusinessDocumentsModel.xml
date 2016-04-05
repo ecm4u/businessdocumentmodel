@@ -1,0 +1,655 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model name="bd:BusinessDocumentModel" xmlns="http://www.alfresco.org/model/dictionary/1.0">
+	<description>Business Documents Model</description>
+	<author>heiko.robert@ecm4u.de</author>
+	<published>2015-08-03</published>
+	<version>1.0</version>
+
+	<imports>
+		<import uri="http://www.alfresco.org/model/content/1.0" prefix="cm" />
+		<import uri="http://www.alfresco.org/model/dictionary/1.0" prefix="d" />
+	</imports>
+
+	<namespaces>
+		<namespace uri="http://ecm4u.de/model/businessdoc/1.0" prefix="bd" />
+	</namespaces>
+
+	<types>
+		<type name="bd:BusinessPartnerSpace">
+			<title>Business Partner Space</title>
+			<parent>cm:folder</parent>
+			<mandatory-aspects>
+				<aspect>bd:BusinessPartner</aspect>
+			</mandatory-aspects>
+		</type>
+
+		<type name="bd:ProjectSpace">
+			<title>Project Space</title>
+			<parent>cm:folder</parent>
+			<mandatory-aspects>
+				<aspect>bd:Project</aspect>
+				<aspect>bd:Customer</aspect>
+			</mandatory-aspects>
+		</type>
+
+		<type name="bd:ProductSpace">
+			<title>Product Space</title>
+			<parent>cm:folder</parent>
+			<mandatory-aspects>
+				<aspect>bd:Product</aspect>
+			</mandatory-aspects>
+		</type>
+
+		<type name="bd:Case">
+			<title>Case Folder</title>
+			<description>Generic Case Folder</description>
+			<parent>cm:folder</parent>
+			<properties>
+				<property name="bd:caseNo">
+					<title>Case Number</title>
+					<description>Number for the Case</description>
+					<type>d:text</type>
+					<mandatory enforced="false">false</mandatory>
+					<index enabled="true">
+						<tokenised>false</tokenised>
+					</index>
+				</property>
+				<property name="bd:caseObjectType">
+					<title>Object Type</title>
+					<description>Object Type the case refers to</description>
+					<type>d:text</type>
+					<mandatory enforced="false">false</mandatory>
+					<index enabled="true">
+						<tokenised>false</tokenised>
+					</index>
+				</property>
+				<property name="bd:caseObjectNo">
+					<title>Case Object Number</title>
+					<description>Number of the Object the case refers to</description>
+					<type>d:text</type>
+					<mandatory enforced="false">false</mandatory>
+					<index enabled="true">
+						<tokenised>false</tokenised>
+					</index>
+				</property>
+				<property name="bd:caseType">
+					<title>Case Type</title>
+					<description></description>
+					<type>d:text</type>
+					<mandatory enforced="false">false</mandatory>
+					<index enabled="true">
+						<tokenised>false</tokenised>
+					</index>
+				</property>
+				<property name="bd:caseProcessStatus">
+					<title>Process Status of the Case</title>
+					<description>signals if the document is processed</description>
+					<type>d:text</type>
+					<mandatory enforced="false">false</mandatory>
+					<index enabled="true">
+						<tokenised>false</tokenised>
+					</index>
+				</property>
+				<property name="bd:casePersonInCharge">
+					<title>Person In Charge</title>
+					<description>person responsible for this case</description>
+					<type>d:text</type>
+					<mandatory enforced="false">false</mandatory>
+                    <multiple>true</multiple>
+					<index enabled="true">
+						<tokenised>both</tokenised>
+					</index>
+				</property>
+				<property name="bd:caseTeamInCharge">
+					<title>Team In Charge</title>
+					<description>team responsible for this case</description>
+					<type>d:text</type>
+					<mandatory enforced="false">false</mandatory>
+                    <multiple>true</multiple>
+					<index enabled="true">
+						<tokenised>both</tokenised>
+					</index>
+				</property>
+			</properties>
+		</type>
+
+		<type name="bd:BusinessDoc">
+			<title>Business Root Document</title>
+			<parent>cm:content</parent>
+			<properties>
+				<property name="bd:docDate">
+					<title>Document Date</title>
+					<type>d:date</type>
+					<mandatory enforced="false">false</mandatory>
+					<index enabled="true">
+                        <atomic>true</atomic>
+                        <stored>false</stored>
+                        <tokenised>both</tokenised>
+					</index>
+				</property>
+				<property name="bd:processedStatus">
+					<title>Processed Status</title>
+					<type>d:text</type>
+					<mandatory enforced="false">false</mandatory>
+					<index enabled="true">
+						<tokenised>false</tokenised>
+					</index>
+				</property>
+			</properties>
+			<mandatory-aspects>
+				<aspect>bd:Tenant</aspect>
+			</mandatory-aspects>
+		</type>
+
+		<type name="bd:ProcurementRequest">
+			<title>Procurement Request</title>
+			<parent>bd:BusinessDoc</parent>
+		</type>
+
+		<type name="bd:Documentation">
+			<title>Documentation</title>
+			<parent>bd:BusinessDoc</parent>
+			<mandatory-aspects>
+				<aspect>bd:Revision</aspect>
+			</mandatory-aspects>
+		</type>
+
+		<type name="bd:Protocol">
+			<title>Protocol</title>
+			<parent>bd:BusinessDoc</parent>
+		</type>
+
+		<type name="bd:Calculation">
+			<title>Calculation</title>
+			<parent>bd:BusinessDoc</parent>
+		</type>
+
+
+		<type name="bd:BusinessPartnerDoc">
+			<title>Business Partner Document</title>
+			<parent>bd:BusinessDoc</parent>
+			<mandatory-aspects>
+				<aspect>bd:BusinessPartner</aspect>
+			</mandatory-aspects>
+		</type>
+
+
+		<type name="bd:AcceptanceCertificate">
+			<title>Acceptance Certificate</title>
+			<parent>bd:BusinessPartnerDoc</parent>
+		</type>
+
+		<type name="bd:NoticeToTerminate">
+			<title>Notice to Terminate</title>
+			<parent>bd:BusinessPartnerDoc</parent>
+			<mandatory-aspects>
+				<aspect>bd:ContractDetails</aspect>
+			</mandatory-aspects>
+		</type>
+
+		<type name="bd:Contract">
+			<title>Contract</title>
+			<parent>bd:BusinessPartnerDoc</parent>
+			<properties>
+				<property name="bd:contractType">
+					<title>Contract Type</title>
+					<type>d:text</type>
+					<mandatory enforced="false">false</mandatory>
+					<index enabled="true">
+						<tokenised>both</tokenised>
+					</index>
+				</property>
+            </properties>
+			<mandatory-aspects>
+				<aspect>bd:ContractDetails</aspect>
+			</mandatory-aspects>
+		</type>
+
+		<type name="bd:Mail">
+			<title>Mail</title>
+			<parent>bd:BusinessPartnerDoc</parent>
+			<properties>
+				<property name="bd:mailType">
+					<title>Mail Type</title>
+					<type>d:text</type>
+					<mandatory enforced="false">false</mandatory>
+					<index enabled="true">
+						<tokenised>false</tokenised>
+					</index>
+				</property>
+			</properties>
+		</type>
+
+		<type name="bd:Invoice">
+			<title>Invoice</title>
+			<parent>bd:BusinessPartnerDoc</parent>
+			<properties>
+				<property name="bd:invoiceNo">
+					<title>Invoice Number</title>
+					<type>d:text</type>
+					<mandatory enforced="false">false</mandatory>
+					<index enabled="true">
+						<tokenised>false</tokenised>
+					</index>
+				</property>
+           </properties>
+        </type>
+
+		<type name="bd:SupplierInvoice">
+			<title>Supplier Invoice</title>
+			<parent>bd:Invoice</parent>
+			<mandatory-aspects>
+				<aspect>bd:Supplier</aspect>
+				<aspect>bd:InboundDoc</aspect>
+			</mandatory-aspects>
+		</type>
+
+		<type name="bd:CustomerInvoice">
+			<title>Customer Invoice</title>
+			<parent>bd:Invoice</parent>
+			<mandatory-aspects>
+				<aspect>bd:Customer</aspect>
+				<aspect>bd:OutboundDoc</aspect>
+			</mandatory-aspects>
+		</type>
+
+		<type name="bd:Order">
+			<title>Order</title>
+			<parent>bd:BusinessPartnerDoc</parent>
+			<properties>
+				<property name="bd:orderNo">
+					<title>Order Number</title>
+					<type>d:text</type>
+					<mandatory enforced="false">false</mandatory>
+					<index enabled="true">
+						<tokenised>false</tokenised>
+					</index>
+				</property>
+           </properties>
+        </type>
+
+		<type name="bd:SupplierOrder">
+			<title>Supplier Order</title>
+			<parent>bd:Order</parent>
+			<mandatory-aspects>
+				<aspect>bd:Supplier</aspect>
+				<aspect>bd:OutboundDoc</aspect>
+			</mandatory-aspects>
+		</type>
+
+		<type name="bd:CustomerOrder">
+			<title>Customer Order</title>
+			<parent>bd:Order</parent>
+			<mandatory-aspects>
+				<aspect>bd:Customer</aspect>
+				<aspect>bd:InboundDoc</aspect>
+			</mandatory-aspects>
+		</type>
+
+		<type name="bd:Offer">
+			<title>Offer</title>
+			<parent>bd:BusinessPartnerDoc</parent>
+			<properties>
+				<property name="bd:offerNo">
+					<title>Offer Number</title>
+					<type>d:text</type>
+					<mandatory enforced="false">false</mandatory>
+					<index enabled="true">
+						<tokenised>false</tokenised>
+					</index>
+				</property>
+           </properties>
+        </type>
+
+		<type name="bd:SupplierOffer">
+			<title>Supplier Offer</title>
+			<parent>bd:Offer</parent>
+			<mandatory-aspects>
+				<aspect>bd:Supplier</aspect>
+				<aspect>bd:InboundDoc</aspect>
+			</mandatory-aspects>
+		</type>
+
+		<type name="bd:CustomerOffer">
+			<title>Customer Offer</title>
+			<parent>bd:Offer</parent>
+			<mandatory-aspects>
+				<aspect>bd:Customer</aspect>
+				<aspect>bd:OutboundDoc</aspect>
+			</mandatory-aspects>
+		</type>
+
+		<type name="bd:OrderConfirmation">
+			<title>Order Confirmation</title>
+			<parent>bd:BusinessPartnerDoc</parent>
+			<properties>
+				<property name="bd:orderConfirmationNo">
+					<title>Order Confirmation Number</title>
+					<type>d:text</type>
+					<mandatory enforced="false">false</mandatory>
+					<index enabled="true">
+						<tokenised>false</tokenised>
+					</index>
+				</property>
+           </properties>
+        </type>
+
+		<type name="bd:CustomerOrderConfirmation">
+			<title>Customer Order Confirmation</title>
+			<parent>bd:OrderConfirmation</parent>
+			<mandatory-aspects>
+				<aspect>bd:Customer</aspect>
+			</mandatory-aspects>
+		</type>
+
+		<type name="bd:SupplierOrderConfirmation">
+			<title>Supplier Order Confirmation</title>
+			<parent>bd:OrderConfirmation</parent>
+			<mandatory-aspects>
+				<aspect>bd:Supplier</aspect>
+			</mandatory-aspects>
+		</type>
+
+		<type name="bd:CreditNote">
+			<title>Credit Note</title>
+			<parent>bd:BusinessPartnerDoc</parent>
+			<properties>
+				<property name="bd:creditNoteNo">
+					<title>Credit Note Number</title>
+					<type>d:text</type>
+					<mandatory enforced="false">false</mandatory>
+					<index enabled="true">
+						<tokenised>false</tokenised>
+					</index>
+				</property>
+           </properties>
+        </type>
+
+		<type name="bd:CustomerCreditNote">
+			<title>Customer Credit Note</title>
+			<parent>bd:CreditNote</parent>
+			<mandatory-aspects>
+				<aspect>bd:Customer</aspect>
+				<aspect>bd:OutboundDoc</aspect>
+			</mandatory-aspects>
+		</type>
+
+		<type name="bd:SupplierCreditNote">
+			<title>Supplier Credit Note</title>
+			<parent>bd:CreditNote</parent>
+			<mandatory-aspects>
+				<aspect>bd:Supplier</aspect>
+				<aspect>bd:InboundDoc</aspect>
+			</mandatory-aspects>
+		</type>
+
+		<type name="bd:DeliveryNote">
+			<title>Delivery Note</title>
+			<parent>bd:BusinessPartnerDoc</parent>
+			<properties>
+				<property name="bd:deliveryNoteNo">
+					<title>Delivery Note Number</title>
+					<type>d:text</type>
+					<mandatory enforced="false">false</mandatory>
+					<index enabled="true">
+						<tokenised>false</tokenised>
+					</index>
+				</property>
+           </properties>
+        </type>
+
+		<type name="bd:CustomerDeliveryNote">
+			<title>Customer Delivery Note</title>
+			<parent>bd:DeliveryNote</parent>
+			<mandatory-aspects>
+				<aspect>bd:Customer</aspect>
+				<aspect>bd:OutboundDoc</aspect>
+			</mandatory-aspects>
+		</type>
+
+		<type name="bd:SupplierDeliveryNote">
+			<title>Supplier Delivery Note</title>
+			<parent>bd:DeliveryNote</parent>
+			<mandatory-aspects>
+				<aspect>bd:Supplier</aspect>
+				<aspect>bd:InboundDoc</aspect>
+			</mandatory-aspects>
+		</type>
+	</types>
+
+	<aspects>
+		<aspect name="bd:InboundDoc">
+			<title>Inbound Document</title>
+			<properties>
+				<property name="bd:receivedDate">
+					<title>Received Date</title>
+					<type>d:datetime</type>
+					<mandatory enforced="false">false</mandatory>
+					<index enabled="true">
+                        <atomic>true</atomic>
+                        <stored>false</stored>
+                        <tokenised>both</tokenised>
+					</index>
+				</property>
+				<property name="bd:receivedNo">
+					<title>Received Number</title>
+					<type>d:text</type>
+					<mandatory enforced="false">false</mandatory>
+					<index enabled="true">
+						<tokenised>false</tokenised>
+					</index>
+				</property>
+			</properties>
+		</aspect>
+
+		<aspect name="bd:OutboundDoc">
+			<title>Outbound Document</title>
+			<properties>
+				<property name="bd:sendDate">
+					<title>Send Date</title>
+					<type>d:datetime</type>
+					<mandatory enforced="false">false</mandatory>
+					<index enabled="true">
+                        <atomic>true</atomic>
+                        <stored>false</stored>
+                        <tokenised>both</tokenised>
+					</index>
+				</property>
+				<property name="bd:sendNo">
+					<title>Send Number</title>
+					<type>d:text</type>
+					<mandatory enforced="false">false</mandatory>
+					<index enabled="true">
+						<tokenised>false</tokenised>
+					</index>
+				</property>
+			</properties>
+		</aspect>
+
+		<aspect name="bd:Tenant">
+			<title>Tenant</title>
+			<properties>
+				<property name="bd:tenantNo">
+					<title>Tenant Number</title>
+					<type>d:text</type>
+					<mandatory enforced="false">false</mandatory>
+					<index enabled="true">
+						<tokenised>false</tokenised>
+					</index>
+				</property>
+			</properties>
+		</aspect>
+
+		<aspect name="bd:BusinessPartner">
+			<title>Business Partner Details</title>
+			<properties>
+				<property name="bd:partnerNo">
+					<title>Business Partner Number</title>
+					<type>d:text</type>
+					<mandatory enforced="false">false</mandatory>
+					<index enabled="true">
+						<tokenised>false</tokenised>
+					</index>
+				</property>
+				<property name="bd:partnerName">
+					<title>Business Partner Name</title>
+					<type>d:text</type>
+					<mandatory enforced="false">false</mandatory>
+					<index enabled="true">
+						<tokenised>false</tokenised>
+					</index>
+				</property>
+			</properties>
+		</aspect>
+
+		<aspect name="bd:Contact">
+			<title>Contact</title>
+			<properties>
+				<property name="bd:contactNo">
+					<title>Contact Number</title>
+					<type>d:text</type>
+					<mandatory enforced="false">false</mandatory>
+					<index enabled="true">
+						<tokenised>false</tokenised>
+					</index>
+				</property>
+				<property name="bd:contactFullName">
+					<title>Contact Full Name</title>
+					<type>d:text</type>
+					<mandatory enforced="false">false</mandatory>
+					<index enabled="true">
+						<tokenised>false</tokenised>
+					</index>
+				</property>
+			</properties>
+		</aspect>
+
+		<aspect name="bd:Product">
+			<title>Product</title>
+			<properties>
+				<property name="bd:productNo">
+					<title>Product Number</title>
+					<type>d:text</type>
+					<mandatory enforced="false">false</mandatory>
+					<index enabled="true">
+						<tokenised>false</tokenised>
+					</index>
+				</property>
+				<property name="bd:productName">
+					<title>Product Name</title>
+					<type>d:text</type>
+					<mandatory enforced="false">false</mandatory>
+					<index enabled="true">
+						<tokenised>false</tokenised>
+					</index>
+				</property>
+			</properties>
+		</aspect>
+
+		<aspect name="bd:Project">
+			<title>Project</title>
+			<properties>
+				<property name="bd:projectNo">
+					<title>Project Number</title>
+					<type>d:text</type>
+					<mandatory enforced="false">false</mandatory>
+					<index enabled="true">
+						<tokenised>false</tokenised>
+					</index>
+				</property>
+				<property name="bd:projectName">
+					<title>Project Name</title>
+					<type>d:text</type>
+					<mandatory enforced="false">false</mandatory>
+					<index enabled="true">
+						<tokenised>false</tokenised>
+					</index>
+				</property>
+			</properties>
+		</aspect>
+
+		<aspect name="bd:Supplier">
+			<title>Supplier</title>
+			<properties>
+				<property name="bd:creditorNo">
+					<title>Supplier Number</title>
+					<type>d:text</type>
+					<mandatory enforced="false">false</mandatory>
+					<index enabled="true">
+						<tokenised>false</tokenised>
+					</index>
+				</property>
+			</properties>
+		</aspect>
+
+		<aspect name="bd:Customer">
+			<title>Customer</title>
+			<properties>
+				<property name="bd:debitorNo">
+					<title>Debitor Number </title>
+					<type>d:text</type>
+					<mandatory enforced="false">false</mandatory>
+					<index enabled="true">
+						<tokenised>false</tokenised>
+					</index>
+				</property>
+			</properties>
+		</aspect>
+
+		<aspect name="bd:ContractDetails">
+			<title>Contract Details</title>
+			<properties>
+				<property name="bd:contractNo">
+					<title>Contract Number</title>
+					<type>d:text</type>
+					<mandatory enforced="false">false</mandatory>
+					<index enabled="true">
+						<tokenised>false</tokenised>
+					</index>
+				</property>
+			</properties>
+		</aspect>
+
+		<aspect name="bd:Revision">
+			<title>Revision</title>
+			<properties>
+				<property name="bd:revisionNo">
+					<title>Revision Number</title>
+					<type>d:text</type>
+					<mandatory enforced="false">false</mandatory>
+					<index enabled="true">
+						<tokenised>false</tokenised>
+					</index>
+				</property>
+			</properties>
+		</aspect>
+
+        <aspect name="bd:Region">
+            <title>Region</title>
+            <properties>
+                <property name="bd:regionCode">
+                    <title>Region Code</title>
+                    <type>d:text</type>
+					<mandatory enforced="false">false</mandatory>
+					<index enabled="true">
+						<tokenised>false</tokenised>
+					</index>
+                </property>
+            </properties>
+        </aspect>
+
+        <aspect name="bd:Language">
+            <title>Language</title>
+            <properties>
+                <property name="bd:languageCode">
+                    <title>Language Code</title>
+                    <type>d:text</type>
+					<mandatory enforced="false">false</mandatory>
+					<index enabled="true">
+						<tokenised>false</tokenised>
+					</index>
+                </property>
+            </properties>
+        </aspect>
+	</aspects>
+</model>
