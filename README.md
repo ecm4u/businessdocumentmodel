@@ -24,6 +24,7 @@ But if you want to use the model types, aspects, and properties in Share, config
 the [example `share-config-custom.xml`](example/share-config-custom.xml).
 
 Examples of Message bundles for Share are provided in [English](example/ecm4u-businessdocumentmodel.properties) and [German](example/ecm4u-businessdocumentmodel_de.properties).
+Make them available using a [custom Share Spring context](example/businessdocumentmodel-slingshot-application-context.xml).
 
 ## The Business Document Model
 
