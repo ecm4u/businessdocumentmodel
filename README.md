@@ -1,4 +1,4 @@
-![Travis build status](https://api.travis-ci.org/ecm4u/businessdocumentmodel.svg?branch=master)
+[![Travis build status](https://api.travis-ci.org/ecm4u/businessdocumentmodel.svg?branch=master)](https://travis-ci.org/ecm4u/businessdocumentmodel)
 
 # ecm4u Business Document Model
 
