@@ -1,3 +1,5 @@
+![Travis build status](https://api.travis-ci.org/ecm4u/businessdocumentmodel.svg?branch=master)
+
 # ecm4u Business Document Model
 
 The heart of this project is an Alfresco model called the "ecm4u Business Document Model".
@@ -14,7 +16,8 @@ $ mvn package
 
 ## Installation
 
-Deploy the resulting `target/businessdocumentmodel-1.0-SNAPSHOT.amp` to your Alfresco installation using the normal Alfresco tools.
+Deploy the resulting `target/businessdocumentmodel-1.0-SNAPSHOT.jar` to the `modules/share` directory of your Alfresco installation.
+See the Alfresco documentation about [simple modules](https://docs.alfresco.com/5.1/concepts/dev-extensions-packaging-techniques-jar-files.html).
 
 ## Configuration
 
