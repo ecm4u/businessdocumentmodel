@@ -568,6 +568,28 @@
             </properties>
         </aspect>
 
+        <aspect name="bd:Issue">
+            <title>Issue</title>
+            <properties>
+                <property name="bd:IssueNo">
+                    <title>Issue Number</title>
+                    <type>d:text</type>
+                    <mandatory enforced="false">false</mandatory>
+                    <index enabled="true">
+                        <tokenised>false</tokenised>
+                    </index>
+                </property>
+                <property name="bd:issueName">
+                    <title>Issue Name</title>
+                    <type>d:text</type>
+                    <mandatory enforced="false">false</mandatory>
+                    <index enabled="true">
+                        <tokenised>false</tokenised>
+                    </index>
+                </property>
+            </properties>
+        </aspect>
+
         <aspect name="bd:Supplier">
             <title>Supplier</title>
             <properties>
@@ -625,10 +647,55 @@
         </aspect>
         
         <aspect name="bd:Cases">
-            <title>Case</title>
+            <title>Case References</title>
             <properties>
                 <property name="bd:caseNoList">
                     <title>Cases List</title>
+                    <type>d:text</type>
+                    <mandatory enforced="false">false</mandatory>
+                    <multiple>true</multiple>
+                    <index enabled="true">
+                        <stored>false</stored>
+                        <tokenised>false</tokenised>
+                    </index>
+                </property>
+            </properties>
+        </aspect>
+        <aspect name="bd:Issues">
+            <title>Issue References</title>
+            <properties>
+                <property name="bd:issueNoList">
+                    <title>Issue List</title>
+                    <type>d:text</type>
+                    <mandatory enforced="false">false</mandatory>
+                    <multiple>true</multiple>
+                    <index enabled="true">
+                        <stored>false</stored>
+                        <tokenised>false</tokenised>
+                    </index>
+                </property>
+            </properties>
+        </aspect>
+        <aspect name="bd:Projects">
+            <title>Project References</title>
+            <properties>
+                <property name="bd:projectNoList">
+                    <title>Project List</title>
+                    <type>d:text</type>
+                    <mandatory enforced="false">false</mandatory>
+                    <multiple>true</multiple>
+                    <index enabled="true">
+                        <stored>false</stored>
+                        <tokenised>false</tokenised>
+                    </index>
+                </property>
+            </properties>
+        </aspect>
+        <aspect name="bd:Products">
+            <title>Product References</title>
+            <properties>
+                <property name="bd:productNoList">
+                    <title>Product List</title>
                     <type>d:text</type>
                     <mandatory enforced="false">false</mandatory>
                     <multiple>true</multiple>
