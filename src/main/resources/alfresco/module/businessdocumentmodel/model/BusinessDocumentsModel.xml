@@ -623,6 +623,22 @@
                 </property>
             </properties>
         </aspect>
+        
+        <aspect name="bd:Cases">
+            <title>Case</title>
+            <properties>
+                <property name="bd:caseNoList">
+                    <title>Cases List</title>
+                    <type>d:text</type>
+                    <mandatory enforced="false">false</mandatory>
+                    <multiple>true</multiple>
+                    <index enabled="true">
+                        <stored>false</stored>
+                        <tokenised>false</tokenised>
+                    </index>
+                </property>
+            </properties>
+        </aspect>
 
         <aspect name="bd:Region">
             <title>Region</title>
