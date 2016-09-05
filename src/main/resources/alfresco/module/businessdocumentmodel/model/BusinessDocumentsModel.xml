@@ -140,6 +140,29 @@
                 <aspect>bd:Tenant</aspect>
             </mandatory-aspects>
         </type>
+		
+		<type name="bd:EmployeeSpace">
+            <title>Employee Folder</title>
+            <parent>cm:folder</parent>
+            <properties>
+                <property name="bd:employeeNo">
+                    <title>Employee Number</title>
+                    <type>d:text</type>
+                    <mandatory enforced="false">false</mandatory>
+                    <index enabled="true">
+                        <tokenised>false</tokenised>
+                    </index>
+                </property>
+                <property name="bd:employeeName">
+                    <title>Employee Name</title>
+                    <type>d:text</type>
+                    <mandatory enforced="false">false</mandatory>
+                    <index enabled="true">
+                        <tokenised>true</tokenised>
+                    </index>
+                </property>
+            </properties>
+        </type>
 
         <type name="bd:ProcurementRequest">
             <title>Procurement Request</title>
@@ -612,6 +635,22 @@
                     <type>d:text</type>
                     <mandatory enforced="false">false</mandatory>
                     <index enabled="true">
+                        <tokenised>false</tokenised>
+                    </index>
+                </property>
+            </properties>
+        </aspect>
+		
+		<aspect name="bd:Employees">
+            <title>Employees</title>
+            <properties>
+                <property name="bd:employeeNoList">
+                    <title>Employee List</title>
+                    <type>d:text</type>
+                    <mandatory enforced="false">false</mandatory>
+                    <multiple>true</multiple>
+                    <index enabled="true">
+                        <stored>false</stored>
                         <tokenised>false</tokenised>
                     </index>
                 </property>
