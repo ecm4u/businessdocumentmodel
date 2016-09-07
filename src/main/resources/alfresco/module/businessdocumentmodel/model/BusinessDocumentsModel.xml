@@ -39,6 +39,14 @@
                 <aspect>bd:Product</aspect>
             </mandatory-aspects>
         </type>
+		
+		<type name="bd:EmployeeSpace">
+            <title>Employee Folder</title>
+            <parent>cm:folder</parent>
+			<mandatory-aspects>
+                <aspect>bd:Employee</aspect>
+            </mandatory-aspects>
+        </type>
 
         <type name="bd:Case">
             <title>Case Folder</title>
@@ -141,29 +149,24 @@
             </mandatory-aspects>
         </type>
 		
-		<type name="bd:EmployeeSpace">
-            <title>Employee Folder</title>
-            <parent>cm:folder</parent>
+		<type name="bd:PersonnelFile">
+            <title>Personnel File</title>
+            <parent>cm:content</parent>
             <properties>
-                <property name="bd:employeeNo">
-                    <title>Employee Number</title>
+                <property name="bd:docType">
+                    <title>Document Type</title>
                     <type>d:text</type>
                     <mandatory enforced="false">false</mandatory>
                     <index enabled="true">
                         <tokenised>false</tokenised>
                     </index>
                 </property>
-                <property name="bd:employeeName">
-                    <title>Employee Name</title>
-                    <type>d:text</type>
-                    <mandatory enforced="false">false</mandatory>
-                    <index enabled="true">
-                        <tokenised>true</tokenised>
-                    </index>
-                </property>
             </properties>
+			<mandatory-aspects>
+                <aspect>bd:Employee</aspect>
+            </mandatory-aspects>
         </type>
-
+		
         <type name="bd:ProcurementRequest">
             <title>Procurement Request</title>
             <parent>bd:BusinessDoc</parent>
@@ -187,7 +190,6 @@
             <parent>bd:BusinessDoc</parent>
         </type>
 
-
         <type name="bd:BusinessPartnerDoc">
             <title>Business Partner Document</title>
             <parent>bd:BusinessDoc</parent>
@@ -195,7 +197,6 @@
                 <aspect>bd:BusinessPartner</aspect>
             </mandatory-aspects>
         </type>
-
 
         <type name="bd:AcceptanceCertificate">
             <title>Acceptance Certificate</title>
@@ -657,6 +658,28 @@
             </properties>
         </aspect>
 
+		<aspect name="bd:Employee">
+            <title>Employee</title>
+            <properties>
+                <property name="bd:employeeNo">
+                    <title>Employee Number</title>
+                    <type>d:text</type>
+                    <mandatory enforced="false">false</mandatory>
+                    <index enabled="true">
+                        <tokenised>false</tokenised>
+                    </index>
+                </property>
+				<property name="bd:employeeName">
+                    <title>Employee Name</title>
+                    <type>d:text</type>
+                    <mandatory enforced="false">false</mandatory>
+                    <index enabled="true">
+                        <tokenised>true</tokenised>
+                    </index>
+                </property>
+            </properties>
+        </aspect>
+		
         <aspect name="bd:ContractDetails">
             <title>Contract Details</title>
             <properties>
