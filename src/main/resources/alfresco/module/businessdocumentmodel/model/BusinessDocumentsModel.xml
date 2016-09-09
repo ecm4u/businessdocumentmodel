@@ -157,8 +157,8 @@
             </mandatory-aspects>
         </type>
 		
-		<type name="bd:PersonnelFile">
-            <title>Personnel File</title>
+		<type name="bd:PersonnelDoc">
+            <title>Personnel Document</title>
             <parent>cm:content</parent>
             <properties>
                 <property name="bd:docType">
@@ -219,8 +219,8 @@
             </mandatory-aspects>
         </type>
 
-        <type name="bd:ContractFile">
-            <title>Contract File</title>
+        <type name="bd:ContractDoc">
+            <title>Contract Document</title>
             <parent>bd:BusinessPartnerDoc</parent>
             <properties>
                 <property name="bd:contractType">
