@@ -47,6 +47,14 @@
                 <aspect>bd:Employee</aspect>
             </mandatory-aspects>
         </type>
+		
+		<type name="bd:ContractSpace">
+            <title>Contract Folder</title>
+            <parent>cm:folder</parent>
+			<mandatory-aspects>
+                <aspect>bd:ContractDetails</aspect>
+            </mandatory-aspects>
+        </type>
 
         <type name="bd:Case">
             <title>Case Folder</title>
@@ -211,8 +219,8 @@
             </mandatory-aspects>
         </type>
 
-        <type name="bd:Contract">
-            <title>Contract</title>
+        <type name="bd:ContractFile">
+            <title>Contract File</title>
             <parent>bd:BusinessPartnerDoc</parent>
             <properties>
                 <property name="bd:contractType">
@@ -689,6 +697,14 @@
                     <mandatory enforced="false">false</mandatory>
                     <index enabled="true">
                         <tokenised>false</tokenised>
+                    </index>
+                </property>
+				<property name="bd:contractName">
+                    <title>Contract Name</title>
+                    <type>d:text</type>
+                    <mandatory enforced="false">false</mandatory>
+                    <index enabled="true">
+                        <tokenised>true</tokenised>
                     </index>
                 </property>
             </properties>
