@@ -159,7 +159,7 @@
 		
 		<type name="bd:PersonnelDoc">
             <title>Personnel Document</title>
-            <parent>cm:content</parent>
+            <parent>bd:BusinessDoc</parent>
             <properties>
                 <property name="bd:docType">
                     <title>Document Type</title>
@@ -812,5 +812,67 @@
                 </property>
             </properties>
         </aspect>
+		
+		<aspect name="bd:RecordData">
+			<title>Record Data</title>
+			<properties>
+				 <property name="bd:recID">
+                    <title>Record Id</title>
+                    <type>d:text</type>
+                    <mandatory enforced="false">false</mandatory>
+                    <index enabled="true">
+                        <tokenised>false</tokenised>
+                    </index>
+                </property>
+				<property name="bd:recRetentionEndDate">
+                    <title>Record Retention End Date</title>
+                    <type>d:datetime</type>
+                    <mandatory enforced="false">false</mandatory>
+                    <index enabled="true">
+                        <tokenised>false</tokenised>
+                    </index>
+                </property>
+				<property name="bd:recRetentionStartDate">
+                    <title>Record Retention Start Date</title>
+                    <type>d:datetime</type>
+                    <mandatory enforced="false">false</mandatory>
+                    <index enabled="true">
+                        <tokenised>false</tokenised>
+                    </index>
+                </property>
+				<property name="bd:recRetentionMinPeriod">
+                    <title>Record Retention Minimum Period</title>
+                    <type>d:text</type>
+                    <mandatory enforced="false">false</mandatory>
+                    <index enabled="true">
+                        <tokenised>false</tokenised>
+                    </index>
+                </property>
+				<property name="bd:recRetentionMaxPeriod">
+                    <title>Record Retention Maximum Period</title>
+                    <type>d:text</type>
+                    <mandatory enforced="false">false</mandatory>
+                    <index enabled="true">
+                        <tokenised>false</tokenised>
+                    </index>
+                </property>
+				<property name="bd:recRetentionDeletionDate">
+                    <title>Record Retention Deletion Date</title>
+                    <type>d:datetime</type>
+                    <mandatory enforced="false">false</mandatory>
+                    <index enabled="true">
+                        <tokenised>false</tokenised>
+                    </index>
+                </property>
+				<property name="bd:recRetentionPolicy">
+                    <title>Record Retention Policy</title>
+                    <type>d:text</type>
+                    <mandatory enforced="false">false</mandatory>
+                    <index enabled="true">
+                        <tokenised>false</tokenised>
+                    </index>
+                </property>
+			</properties>
+		</aspect>
     </aspects>
 </model>
