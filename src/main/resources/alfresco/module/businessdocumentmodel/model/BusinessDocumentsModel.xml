@@ -40,18 +40,18 @@
             </mandatory-aspects>
         </type>
 		
-		<type name="bd:EmployeeSpace">
+        <type name="bd:EmployeeSpace">
             <title>Employee Folder</title>
             <parent>cm:folder</parent>
-			<mandatory-aspects>
+            <mandatory-aspects>
                 <aspect>bd:Employee</aspect>
             </mandatory-aspects>
         </type>
 		
-		<type name="bd:ContractSpace">
+        <type name="bd:ContractSpace">
             <title>Contract Folder</title>
             <parent>cm:folder</parent>
-			<mandatory-aspects>
+            <mandatory-aspects>
                 <aspect>bd:ContractDetails</aspect>
             </mandatory-aspects>
         </type>
@@ -157,7 +157,7 @@
             </mandatory-aspects>
         </type>
 		
-		<type name="bd:PersonnelDoc">
+        <type name="bd:PersonnelDoc">
             <title>Personnel Document</title>
             <parent>bd:BusinessDoc</parent>
             <properties>
@@ -170,7 +170,7 @@
                     </index>
                 </property>
             </properties>
-			<mandatory-aspects>
+            <mandatory-aspects>
                 <aspect>bd:Employee</aspect>
             </mandatory-aspects>
         </type>
@@ -259,6 +259,70 @@
                 <property name="bd:invoiceNo">
                     <title>Invoice Number</title>
                     <type>d:text</type>
+                    <mandatory enforced="false">false</mandatory>
+                    <index enabled="true">
+                        <tokenised>false</tokenised>
+                    </index>
+                </property>
+				<property name="bd:invoiceDate">
+                    <title>Invoice Date</title>
+                    <type>d:date</type>
+                    <mandatory enforced="false">false</mandatory>
+                    <index enabled="true">
+                        <tokenised>false</tokenised>
+                    </index>
+                </property>
+                <property name="bd:payableDate">
+                    <title>Last possible date of payment</title>
+                    <type>d:date</type>
+                    <mandatory enforced="false">false</mandatory>
+                    <index enabled="true">
+                        <tokenised>false</tokenised>
+                    </index>
+                </property>
+				<property name="bd:datePaid">
+                    <title>Date of payment</title>
+                    <type>d:date</type>
+                    <mandatory enforced="false">false</mandatory>
+                    <index enabled="true">
+                        <tokenised>false</tokenised>
+                    </index>
+                </property>
+                <property name="bd:paymentAmount">
+                    <title>Amount for payment (gross)</title>
+                    <type>d:text</type>
+                    <mandatory enforced="false">false</mandatory>
+                    <index enabled="true">
+                        <tokenised>false</tokenised>
+                    </index>
+                </property>
+				<property name="bd:valueAddedTax">
+                    <title>Value added Text (amount) </title>
+                    <type>d:text</type>
+                    <mandatory enforced="false">false</mandatory>
+                    <index enabled="true">
+                        <tokenised>false</tokenised>
+                    </index>
+                </property>
+				<property name="bd:earlyPaymentDiscount">
+                    <title>Discount for early payment</title>
+                    <type>d:text</type>
+                    <mandatory enforced="false">false</mandatory>
+                    <index enabled="true">
+                        <tokenised>false</tokenised>
+                    </index>
+                </property>
+				<property name="bd:earlyPaymentDiscountDate">
+                    <title>Discount for early payment</title>
+                    <type>d:date</type>
+                    <mandatory enforced="false">false</mandatory>
+                    <index enabled="true">
+                        <tokenised>false</tokenised>
+                    </index>
+                </property>
+				<property name="bd:paid">
+                    <title>Is paid</title>
+                    <type>d:boolean</type>
                     <mandatory enforced="false">false</mandatory>
                     <index enabled="true">
                         <tokenised>false</tokenised>
@@ -450,6 +514,22 @@
     </types>
 
     <aspects>
+        <aspect name="bd:BookingState">
+            <title>Booking State</title>
+            <properties>
+                <property name="bd:bookingDate">
+                    <title>Booking Date</title>
+                    <type>d:date</type>
+                    <mandatory enforced="false">false</mandatory>
+                    <index enabled="true">
+                        <atomic>true</atomic>
+                        <stored>false</stored>
+                        <tokenised>both</tokenised>
+                    </index>
+                </property>
+            </properties>
+        </aspect>
+		
         <aspect name="bd:InboundDoc">
             <title>Inbound Document</title>
             <properties>
@@ -650,7 +730,7 @@
             </properties>
         </aspect>
 		
-		<aspect name="bd:Employees">
+        <aspect name="bd:Employees">
             <title>Employees</title>
             <properties>
                 <property name="bd:employeeNoList">
@@ -666,7 +746,7 @@
             </properties>
         </aspect>
 
-		<aspect name="bd:Employee">
+        <aspect name="bd:Employee">
             <title>Employee</title>
             <properties>
                 <property name="bd:employeeNo">
@@ -677,7 +757,7 @@
                         <tokenised>false</tokenised>
                     </index>
                 </property>
-				<property name="bd:employeeName">
+                <property name="bd:employeeName">
                     <title>Employee Name</title>
                     <type>d:text</type>
                     <mandatory enforced="false">false</mandatory>
@@ -699,7 +779,7 @@
                         <tokenised>false</tokenised>
                     </index>
                 </property>
-				<property name="bd:contractName">
+                <property name="bd:contractName">
                     <title>Contract Name</title>
                     <type>d:text</type>
                     <mandatory enforced="false">false</mandatory>
@@ -813,10 +893,10 @@
             </properties>
         </aspect>
 		
-		<aspect name="bd:RecordData">
-			<title>Record Data</title>
-			<properties>
-				 <property name="bd:recID">
+        <aspect name="bd:RecordData">
+            <title>Record Data</title>
+            <properties>
+                <property name="bd:recID">
                     <title>Record Id</title>
                     <type>d:text</type>
                     <mandatory enforced="false">false</mandatory>
@@ -824,7 +904,7 @@
                         <tokenised>false</tokenised>
                     </index>
                 </property>
-				<property name="bd:recRetentionEndDate">
+                <property name="bd:recRetentionEndDate">
                     <title>Record Retention End Date</title>
                     <type>d:datetime</type>
                     <mandatory enforced="false">false</mandatory>
@@ -832,7 +912,7 @@
                         <tokenised>false</tokenised>
                     </index>
                 </property>
-				<property name="bd:recRetentionStartDate">
+                <property name="bd:recRetentionStartDate">
                     <title>Record Retention Start Date</title>
                     <type>d:datetime</type>
                     <mandatory enforced="false">false</mandatory>
@@ -840,7 +920,7 @@
                         <tokenised>false</tokenised>
                     </index>
                 </property>
-				<property name="bd:recRetentionMinPeriod">
+                <property name="bd:recRetentionMinPeriod">
                     <title>Record Retention Minimum Period</title>
                     <type>d:text</type>
                     <mandatory enforced="false">false</mandatory>
@@ -848,7 +928,7 @@
                         <tokenised>false</tokenised>
                     </index>
                 </property>
-				<property name="bd:recRetentionMaxPeriod">
+                <property name="bd:recRetentionMaxPeriod">
                     <title>Record Retention Maximum Period</title>
                     <type>d:text</type>
                     <mandatory enforced="false">false</mandatory>
@@ -856,7 +936,7 @@
                         <tokenised>false</tokenised>
                     </index>
                 </property>
-				<property name="bd:recRetentionDeletionDate">
+                <property name="bd:recRetentionDeletionDate">
                     <title>Record Retention Deletion Date</title>
                     <type>d:datetime</type>
                     <mandatory enforced="false">false</mandatory>
@@ -864,7 +944,7 @@
                         <tokenised>false</tokenised>
                     </index>
                 </property>
-				<property name="bd:recRetentionPolicy">
+                <property name="bd:recRetentionPolicy">
                     <title>Record Retention Policy</title>
                     <type>d:text</type>
                     <mandatory enforced="false">false</mandatory>
@@ -872,7 +952,7 @@
                         <tokenised>false</tokenised>
                     </index>
                 </property>
-			</properties>
-		</aspect>
+            </properties>
+        </aspect>
     </aspects>
 </model>
