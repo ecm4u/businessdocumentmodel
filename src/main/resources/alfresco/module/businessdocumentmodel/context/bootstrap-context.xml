@@ -8,7 +8,7 @@
     <bean id="businessdocumentmodel.dictionaryBootstrap" parent="dictionaryModelBootstrap" depends-on="dictionaryBootstrap">
         <property name="models">
             <list>
-                <value>alfresco/module/${project.artifactId}/model/BusinessDocumentsModel.xml</value>
+                <value>alfresco/module/businessdocumentmodel/model/BusinessDocumentsModel.xml</value>
             </list>
         </property>
     </bean>
