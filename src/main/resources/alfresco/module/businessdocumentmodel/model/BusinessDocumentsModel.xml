@@ -328,6 +328,22 @@
                         <tokenised>false</tokenised>
                     </index>
                 </property>
+                <property name="bd:reverseCharge">
+                    <title>Is reverse charge</title>
+                    <type>d:boolean</type>
+                    <mandatory enforced="false">false</mandatory>
+                    <index enabled="true">
+                        <tokenised>false</tokenised>
+                    </index>
+                </property>
+                <property name="bd:postingText">
+                    <title>Posting text</title>
+                    <type>d:text</type>
+                    <mandatory enforced="false">false</mandatory>
+                    <index enabled="true">
+                        <tokenised>false</tokenised>
+                    </index>
+                </property>
             </properties>
         </type>
 
